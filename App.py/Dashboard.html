@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+    <title> COllege Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h2>Student Dashboard</h2>
+              <nav>
+            <a href="#">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">Profile</a>
+            <a href="#">Logout</a>
+        </nav>
+        </header>
+            <main>
+
+       
+        <section class="profile">
+            <h2 align="center">Profile</h2>
+
+            <div class="profile-info">
+                <p><strong>Name:</strong> Devansh Parashar </p>
+                <p><strong>Roll No:</strong>2501921520159</p>
+                <p><strong>Course:</strong> CSAI</p>
+                <p><strong>Email:</strong> devanshparashar223@gmail.com</p>
+            </div>
+               
+        <section class="courses">
+            <h2 align="center">My Courses</h2>
+
+            <div class="course-container">
+
+                <div class="course-card">
+                    <h3>Data Structures</h3>
+                    <p>Learn arrays, linked lists, trees and algorithms.</p>
+                    <button>View Course</button>
+                </div>
+
+                <div class="course-card">
+                    <h3>Web Development</h3>
+                    <p>Learn HTML, CSS, JavaScript and modern web development.</p>
+                    <button>View Course</button>
+                </div>
+
+                <div class="course-card">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Introduction to AI, machine learning and intelligent systems.</p>
+                    <button>View Course</button>
+                </div>
+
+            </div>
+        </section>
+           </main>
+
+   
+    <footer>
+        <p>Contact: college@example.com | +91 9068661301</p>
+    </footer>
+
+</body>
+</html>.course-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.course-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card h3 {
+    margin-bottom: 12px;
+    color: #1e3a8a;
+}
+
+.course-card p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+button {
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #172554;
+}
+
+/* Footer */
+footer {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .profile-info {
+        grid-template-columns: 1fr;
+    }
+
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        width: 95%;
+    }
+}
